@@ -8,16 +8,17 @@ pipeline {
         timeout(time: 30, unit: 'SECONDS')
     }
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'python --version'
             }
         }
-        stage('Deploy') {
-
-        }
         stage('Test') {
-
+            echo 'Test'
+        }
+        
+        stage('Deploy') {
+            echo 'Deploy'
         }
     }
     post {
